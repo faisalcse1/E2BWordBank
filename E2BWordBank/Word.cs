@@ -1,11 +1,12 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace E2BWordBank
 {
     public class Word
     {
         [JsonProperty("pron")]
-        public string Pron { get; set; }
+        public List<string> Pron { get; set; }
         [JsonProperty("bn")]
         public string Bn { get; set; }
 
@@ -13,13 +14,13 @@ namespace E2BWordBank
         public string En { get; set; }
 
         [JsonProperty("bn_syns")]
-        public object BnSyns { get; set; }
+        public List<string> BnSyns { get; set; }
 
         [JsonProperty("en_syns")]
-        public object EnSyns { get; set; }
+        public List<string> EnSyns { get; set; }
 
         [JsonProperty("sents")]
-        public object Sents { get; set; }
+        public List<string> Sents { get; set; }
 
         [JsonProperty("details")]
         public string Details { get; set; }

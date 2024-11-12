@@ -17,7 +17,7 @@ namespace E2BWordBank
         /// <returns>A list of all words available in the dictionary.</returns>
         public static List<Word> GetAllWords()
         {
-            string wordFileName = "/E2BCData.json";
+            string wordFileName = "Data\\E2BCData.json";
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string wordFilePath=baseDirectory + wordFileName;
             string jsonWords=File.ReadAllText(wordFilePath);
