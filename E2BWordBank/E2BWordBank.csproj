@@ -9,7 +9,7 @@
 	  <PackageProjectUrl>https://github.com/faisalcse1/E2BWordBank</PackageProjectUrl>
 	  <PackageIconUrl />
 	  <RepositoryUrl>https://github.com/faisalcse1/E2BWordBank</RepositoryUrl>
-	  <PackageTags>E2BWordBank;E2BWordDatabase;BanglaDictionaryHub;E2BDictionaryPlus;E2BDataAccess</PackageTags>
+	  <PackageTags>E2BWordBank;E2BWordDatabase;BanglaDictionaryHub;E2BDictionaryPlus;E2BDataAccess;dictionary;bangla-dictionary;bengali-dictionary</PackageTags>
 	  <Description>The E2BWordBank package provides a comprehensive English-to-Bangla word database for easy integration into .NET applications.</Description>
 	  <FileVersion>1.0.1</FileVersion>
 	  <AssemblyVersion>1.0.1</AssemblyVersion>
@@ -18,25 +18,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\E2BCData.json" />
+    <None Remove="Data\E2BData.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="book.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Data\" />
+    <EmbeddedResource Include="Data\E2BCData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\E2BData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Data\E2BCData.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\E2BData.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

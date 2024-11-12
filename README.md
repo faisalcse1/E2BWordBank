@@ -28,7 +28,7 @@ A simple dictionary repository class that allows for managing and retrieving wor
 - **Description**: Retrieves words that start with the specified prefix and match the given word type.
 - **Parameters**:
   - `prefix` (string): The starting substring to filter words by.
-  - `type` (WordType): The category of words to retrieve (e.g., `WordType.En` for English). Defaults to `WordType.En` (English).
+  - `type` (WordType): The category of words to retrieve (e.g., `WordType.En` for English & `WordType.Bn` for Bangla). Defaults to `WordType.En` (English).
 - **Returns**: A list of `Word` objects that start with the specified prefix and match the given type.
 
 ### 3. `FindWord(string prefix, WordType type = WordType.En)`
