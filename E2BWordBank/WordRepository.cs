@@ -11,15 +11,17 @@ namespace E2BWordBank
     /// </summary>
     public static class WordRepository
     {
+
+
         /// <summary>
         /// Retrieves all words from the dictionary or word database.
         /// </summary>
         /// <returns>A list of all words available in the dictionary.</returns>
         public static List<Word> GetAllWords()
         {
-            string wordFileName = "Data\\E2BCData.json";
+            string wordFileName = "E2BCData.txt";
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string wordFilePath=baseDirectory + wordFileName;
+            string wordFilePath = baseDirectory + wordFileName;
             string jsonWords=File.ReadAllText(wordFilePath);
             return JsonConvert.DeserializeObject<List<Word>>(jsonWords);
         }
