@@ -6,6 +6,9 @@ using System.Linq;
 
 namespace E2BWordBank
 {
+    /// <summary>
+    /// Provides methods for accessing and managing words in the word database or dictionary.
+    /// </summary>
     public static class WordRepository
     {
         /// <summary>

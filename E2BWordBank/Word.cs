@@ -5,8 +5,7 @@ namespace E2BWordBank
     public class Word
     {
         [JsonProperty("pron")]
-        public object Pron { get; set; }
-
+        public string Pron { get; set; }
         [JsonProperty("bn")]
         public string Bn { get; set; }
 
