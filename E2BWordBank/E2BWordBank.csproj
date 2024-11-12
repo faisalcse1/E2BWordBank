@@ -1,9 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+	<TargetFrameworks>net4.6.1;netcoreapp3.1;net5.0;net6.0;net7.0</TargetFrameworks>
+	  <Version>1.0.1</Version>
+	  <Authors>MD FAISAL</Authors>
+	  <Company>Programming Palli</Company>
+	  <Copyright>2024 Programming Palli</Copyright>
+	  <PackageProjectUrl>https://github.com/faisalcse1/E2BWordBank</PackageProjectUrl>
+	  <PackageIconUrl />
+	  <RepositoryUrl>https://github.com/faisalcse1/E2BWordBank</RepositoryUrl>
+	  <PackageTags>E2BWordBank;E2BWordDatabase;BanglaDictionaryHub;E2BDictionaryPlus;E2BDataAccess</PackageTags>
+	  <Description>The E2BWordBank package provides a comprehensive English-to-Bangla word database for easy integration into .NET applications.</Description>
+	  <FileVersion>1.0.1</FileVersion>
+	  <AssemblyVersion>1.0.1</AssemblyVersion>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
 </Project>
