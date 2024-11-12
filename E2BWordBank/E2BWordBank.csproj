@@ -2,7 +2,7 @@
 
   <PropertyGroup>
 	<TargetFrameworks>net4.6.1;netcoreapp3.1;net5.0;net6.0;net7.0</TargetFrameworks>
-	  <Version>1.0.1</Version>
+	  <Version>1.0.2</Version>
 	  <Authors>MD FAISAL</Authors>
 	  <Company>Programming Palli</Company>
 	  <Copyright>2024 Programming Palli</Copyright>
@@ -18,12 +18,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="book.png" />
     <None Remove="Data\E2BCData.json" />
     <None Remove="Data\E2BData.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="book.ico" />
+    <EmbeddedResource Include="book.ico" />
+    <Resource Include="book.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
