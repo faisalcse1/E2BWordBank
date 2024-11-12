@@ -14,7 +14,7 @@ GetWordsStartingWith(string prefix, WordType type= WordType.En);
 FindWord(string prefix, WordType type = WordType.En);
 ````
 
-# Word Repository
+# WordRepository
 
 A simple dictionary repository class that allows for managing and retrieving words from a word database. The class provides methods for retrieving all words, filtering words based on a prefix, and finding a single word that exactly matches a given prefix.
 
