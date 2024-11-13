@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace E2BWordBank
 {
@@ -12,18 +13,22 @@ namespace E2BWordBank
     public static class WordRepository
     {
 
-
         /// <summary>
         /// Retrieves all words from the dictionary or word database.
         /// </summary>
         /// <returns>A list of all words available in the dictionary.</returns>
         public static List<Word> GetAllWords()
-        {
-            string wordFileName = "E2BCData.txt";
-            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string wordFilePath = baseDirectory + wordFileName;
-            string jsonWords=File.ReadAllText(wordFilePath);
-            return JsonConvert.DeserializeObject<List<Word>>(jsonWords);
+        {            
+            var assembly = Assembly.GetExecutingAssembly();            
+            var resourceName = "E2BWordBank.Data.E2BCData.txt";
+            Stream stream = assembly.GetManifestResourceStream(resourceName);
+            if (stream == null)
+            {
+                throw new FileNotFoundException($"Resource '{resourceName}' not found in the assembly.");
+            }
+            var reader = new StreamReader(stream);
+            return JsonConvert.DeserializeObject<List<Word>>(reader.ReadToEnd());          
+            
         }
 
         /// <summary>
